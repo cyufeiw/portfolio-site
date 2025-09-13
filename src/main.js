@@ -73,7 +73,7 @@ camera.position.x = -40;
 camera.position.y = 49;
 camera.position.z = 90;
 
-const cameraOffset = new THREE.Vector3(-40, 49, 90);
+const cameraOffset = new THREE.Vector3(-30, 49, 90);
 
 camera.setFocalLength(120);
 
@@ -86,53 +86,74 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.LinearToneMapping;
 renderer.toneMappingExposure = 1.85;
 
-//modal stuff
-const modalContent = {
-    "aboutme": {
-title: "About Me",
-content: "about me description",
-    },
-    "projects": {
-title: "Projects",
-content: "these are my projects!",
-link: "https://example.com/"
-    },
-    "hobbies": {
-title: "Hobbies",
-content: "things I like to do",
-link: "https://example.com/"
-    },
-}
+//loading screen
+const loadingScreen = document.getElementById("loadingScreen");
+const loadingText = document.querySelector(".loading-text");
+const enterButton = document.querySelector(".enter-button");
+const instructions = document.querySelector(".instructions");
 
-const modal = document.querySelector(".modal");
-const modalTitle = document.querySelector(".modal-title");
-const modalProjectDescription = document.querySelector(".modal-project-description");
+const manager = new THREE.LoadingManager();
+
+manager.onLoad = function(){
+    const t1 = gsap.timeline();
+    t1.to(loadingText, {
+        opacity: 0,
+        duration: 0,
+    });
+
+    t1.to(enterButton, {
+        opacity: 1,
+        duration: 0,
+    })
+};
+
+enterButton.addEventListener("click", () => {
+  gsap.to(loadingScreen, {
+    opacity: 0,
+    duration: 0,
+  });
+  gsap.to(instructions, {
+    opacity: 0,
+    duration: 0,
+    onComplete: () => {
+      loadingScreen.remove();
+    },
+  });
+});
+
+const aboutMeModal = document.querySelector(".about-me-modal");
+const hobbiesModal = document.querySelector(".hobbies-modal");
+const projectsModal = document.querySelector(".projects-modal");
 const modalExitButton = document.querySelector(".modal-exit-button");
-const modalVisitProjectButton = document.querySelector(".modal-project-visit-button");
+const hobbiesModalExitButton = document.querySelector(".hobbies-modal-exit-button")
+const projectsModalExitButton = document.querySelector(".projects-modal-exit-button");
 
-
-function showModal(id) {
-    const content = modalContent[id];
-    if(content) {
-        modalTitle.textContent = content.title;
-        modalProjectDescription.textContent = content.content;
-        modal.classList.toggle("hidden");
-    }
-
-    if(content.link) {
-        modalVisitProjectButton.href = content.link;
-        modalVisitProjectButton.classList.remove("hidden");
-    } else {
-        modalVisitProjectButton.classList.add("hidden");
-
-    }
+function showModal() {
+    aboutMeModal.style.display = "block";
+    //aboutMeModal.classList.toggle("hidden");
+    
+}
+function showHobbiesModal() {
+    hobbiesModal.classList.toggle("hidden");
+    
+}
+function hideHobbiesModal(){
+    hobbiesModal.classList.toggle("hidden");
 }
 
 function hideModal() {
-    modal.classList.toggle("hidden");
+    aboutMeModal.style.display = "none";
+    //aboutMeModal.classList.toggle("hidden");
+    
 }
 
-//resize window
+function showProjectsModal() {
+    projectsModal.style.display = "block";
+}
+
+function hideProjectsModal() {
+    projectsModal.style.display = "none";
+}
 
 function onResize(){
     sizes.width = window.innerWidth;
@@ -153,9 +174,13 @@ function onPointerMove( event ) {
 
 //clicky
 function onClick(){
-    if(intersectObject !== ""){
-        showModal(intersectObject);
-    }
+        if(intersectObject == "aboutme"){
+            showModal();
+        } else if(intersectObject == "hobbies") {
+            showHobbiesModal();
+        } else if(intersectObject == "projects") {
+            showProjectsModal();
+        }
 }
 
 //object animation
@@ -280,9 +305,12 @@ function playerCollisions() {
 
 window.addEventListener("resize", onResize);
 window.addEventListener( 'pointermove', onPointerMove );
-window.addEventListener("click", onClick);
 modalExitButton.addEventListener("click", hideModal);
+window.addEventListener("click", onClick);
+hobbiesModalExitButton.addEventListener("click", hideHobbiesModal);
+projectsModalExitButton.addEventListener("click", hideProjectsModal);
 window.addEventListener("keydown", onKeyDown);
+
 
 //load model in scene
 const loader = new GLTFLoader();
@@ -338,11 +366,6 @@ sun.shadow.mapSize.width = 4096;
 sun.shadow.mapSize.height = 4096;
 scene.add( sun );
 
-// const helper = new THREE.DirectionalLightHelper( sun, 5 );
-// scene.add( helper );
-// const shadowHelper = new THREE.CameraHelper( sun.shadow.camera );
-// scene.add( shadowHelper );
-
 const light = new THREE.AmbientLight( 0x404040,3 ); // soft white light
 scene.add( light );
 
@@ -360,27 +383,26 @@ function animate() {
     raycaster.setFromCamera( pointer, camera );
 	const intersects = raycaster.intersectObjects(intersectObjects);
 
-    if(intersects.length > 0) {
+        if(intersects.length > 0) {
         document.body.style.cursor = "pointer";
-    } else {
-        document.body.style.cursor = "default";
-        intersectObject = "";
-    }
+        } else {
+            document.body.style.cursor = "default";
+            intersectObject = "";
+        }
 
-	for ( let i = 0; i < intersects.length; i ++ ) {
-        intersectObject = intersects[0].object.parent.name;
-
-    }
-
-    if(intersectObject === "aboutme" && !aboutme.isMoving){
-        moveAboutMe();
-    }
-    if(intersectObject === "projects" && !projects.isMoving){
-        moveProjects();
-    }
-    if(intersectObject === "hobbies" && !hobbies.isMoving){
-        moveHobbies();
-    }
+        for ( let i = 0; i < intersects.length; i ++ ) {
+            intersectObject = intersects[0].object.parent.name;
+        }
+        if(intersectObject === "aboutme" && !aboutme.isMoving){
+            moveAboutMe();
+        }
+        if(intersectObject === "projects" && !projects.isMoving){
+            moveProjects();
+        }
+        if(intersectObject === "hobbies" && !hobbies.isMoving){
+            moveHobbies();
+        }
+    
 
     renderer.render( scene, camera );
 

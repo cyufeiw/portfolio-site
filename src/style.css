@@ -9,8 +9,68 @@
     display: none;
 }
 
-/*modal*/
-.modal{
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #465D50;
+    font-family: "Righteous";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid white;
+    z-index: 1000;
+}
+
+.loading-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #FFFFFF;
+    font-size: 48px; 
+    text-align: center ;
+}
+
+.enter-button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color:#FFFFFF;
+    font-size: 36px;
+    background: #465D50;
+    border: 3px solid white;
+    padding: 8px 20px;
+    font-family: "Righteous";
+    opacity: 1;
+}
+
+.enter-button:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #465D50;
+}
+
+.instructions {
+  z-index: 1000;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 26px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*about me modal*/
+.about-me-modal{
     z-index: 999;
     position: absolute;
     top: 50%;
@@ -18,13 +78,14 @@
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 1300px;
+    max-height: 700px;
     background-color: #465D50;
-    border: 2px solid #FFFFFF;
+    border: 5px solid #FFFFFF;
     color: #fff;
 }
 
 .modal-wrapper{
-    padding: 12px;
+    padding: 20px;
 }
 
 .modal-header {
@@ -33,10 +94,183 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: "Righteous";
-    font-size: 30px;
+    font-size: 48px;
+    left: 50;
+}
+
+.modal-footer{
+    padding: 20px;
+}
+.modal-exit-button {
+    background-color: #fff;
+    color: #465D50;
+    font-size: 32px;
+    padding: 16px;
+    border-radius: 50%;
+    font-family: "Righteous";
+    transition-duration: 0.4s;
+    border: #fff;
+    float: right;
+}
+
+.modal-exit-button:hover {
+    background-color: #465D50;
+    color: #fff;
+    cursor: pointer;
 }
 
 .modal-content {
+    font-family: "Righteous";
+}
+
+.modal-content-wrapper {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.aboutme-text {
+    text-align: left;
     font-family: "Be Vietnam Pro";
     font-weight: 200;
+    width: 75%;
+    
+
+}
+
+/*hobbies modal*/
+.hobbies-modal{
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1300px;
+    max-height: 700px;
+    background-color: #465D50;
+    border: 5px solid #FFFFFF;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.hobbies-modal-wrapper{
+    padding: 20px;
+}
+
+.hobbies-modal-content-wrapper {
+    padding: 20px;
+}
+
+.hobbies-modal-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Righteous";
+    font-size: 48px;
+    left: 50;
+}
+
+.hobbies-modal-footer {
+    padding: 20px;
+}
+
+.hobbies-modal-exit-button {
+    background-color: #fff;
+    float: right;
+    color: #465D50;
+    font-size: 32px;
+    padding: 16px;
+    border-radius: 50%;
+    font-family: "Righteous";
+    transition-duration: 0.4s;
+    border: #fff;
+    cursor: pointer;
+}
+
+.hobbies-modal-exit-button:hover {
+    background-color: #465D50;
+    color: #fff;
+}
+
+.photo-gallery-container {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 300px 300px 300px;
+}
+
+.photo-gallery {
+    float: left;
+    margin: auto;
+    width: 300px;
+    font-family: "Be Vietnam Pro";
+    font-weight: 200 ;
+}
+
+.photo-gallery img{
+    width: 100%;
+    height:auto;
+}
+
+/*projects modal stuff*/
+.projects-modal{
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1300px;
+    max-height: 700px;
+    background-color: #465D50;
+    border: 5px solid #FFFFFF;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.projects-modal-wrapper{
+    padding: 20px;
+}
+
+.projects-modal-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Righteous";
+    font-size: 48px;
+    left: 50;
+}
+
+.projects-modal-footer{
+    padding: 20px;
+}
+.projects-modal-exit-button {
+    background-color: #fff;
+    color: #465D50;
+    font-size: 32px;
+    padding: 16px;
+    border-radius: 50%;
+    font-family: "Righteous";
+    transition-duration: 0.4s;
+    border: #fff;
+    float: right;
+}
+
+.projects-modal-exit-button:hover {
+    background-color: #465D50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.projects-modal-content {
+    font-family: "Righteous";
+    align-content: center;
+}
+
+.projects-modal-content-wrapper {
+    padding: 20px;
 }
