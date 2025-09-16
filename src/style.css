@@ -9,12 +9,6 @@
     display: none;
 }
 
-@media (max-width: 768px) {
-    div {
-        font-size: 3vw;
-    }
-}
-
 .loading-screen {
     position: fixed;
     top: 0;
@@ -32,17 +26,17 @@
 
 .loading-text {
     position: absolute;
-    top: 10%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, 50%);
     color: #FFFFFF;
-    font-size: 5vh; 
+    font-size: 5vmin; 
     text-align: center ;
 }
 
 .enter-button {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, 50%);
     color:#FFFFFF;
@@ -63,11 +57,11 @@
 .instructions {
   z-index: 1000;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 3vh;
+  font-size: 3vmin;
   width: 100%;
   display: flex;
   flex-direction: column;
