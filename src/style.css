@@ -32,7 +32,7 @@
 
 .loading-text {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, 50%);
     color: #FFFFFF;
@@ -42,7 +42,7 @@
 
 .enter-button {
     position: absolute;
-    top: 60%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, 50%);
     color:#FFFFFF;
