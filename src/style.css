@@ -9,6 +9,12 @@
     display: none;
 }
 
+@media (max-width: 768px) {
+    div {
+        font-size: 3vw;
+    }
+}
+
 .loading-screen {
     position: fixed;
     top: 0;
