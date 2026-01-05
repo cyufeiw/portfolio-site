@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carol's Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <a style="position: relative; top: 20px; right: -20px;" href="../index.html"><button id="home-button">Back to 2D Site</button></a>
+    <div class = "loading-screen" id="loadingScreen">
+      <div class= "loading-text"> Welcome to Carol's Portfolio! </div>
+      <button class="enter-button">Enter Desk!</button>
+      <div class="instructions" style="text-align: center;"> ~~use WASD or arrow keys to move around~~ <br> hover around and see what you can find!
+      <br><br>please view on desktop</div>
+    </div>
+    <div class="about-me-modal hidden">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <div class="modal-title">About Me</div>
+        </div>
+          <div class="modal-content">
+            <div class="modal-content-wrapper">
+              <div class="about-me-container">
+            <div class="about-me-text">
+                <p>
+                    Hello my name is Carol Wu and I am currently in my third year at New York University's
+                    <a href="https://tisch.nyu.edu/itp/admissions/ima-bfa">Interactive Media Arts</a> program! 
+                </p>
+                <p>
+                    During my time here I have explored how to combine art and technogy with emerging media and 
+                    programs. Currently I am interested in animation, how to tell stories with it and how to 
+                    implement it into the user experience; as well as digital and physical experiences for people. 
+                    I'm always excitied to learn new things and discover more diciplines!
+                </p>
+                <p>
+                    When I am not working on my projects, I am practicing bass guitar, traveling and taking pictures,
+                    and skething! 
+                </p>
+                <p>
+                    Feel free to contact me by email: cyw6956@nyu.edu
+                </p>
+            </div>
+            <img class="about-me-pic" src="carolimgbgcomp.png"/>
+        </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-exit-button">exit</button>
+        </div>
+    </div>
+    <div class="projects-modal hidden">
+      <div class="projects-modal-wrapper">
+        <div class="projects-modal-header">
+          <div class="projects-modal-title">Projects</div>
+        </div>
+          <div class="projects-modal-content">
+                      <p>Warning: these links will take you out of the 3D site and into the detailed projects page.</p>
+
+            <div class="projects-modal-content-wrapper">
+              <!-- <h2 style="font-family: Righteous;">Is There Really No Happiness MV</h2>
+              <iframe style="display: block; margin: 0 auto;" width = "1000" height="500" src="https://youtube.com/embed/C5jqBr8UXmk"></iframe>
+              <div class="animation-gallery-container" style="text-align: center; padding: 20px;">
+                <img src="itrnh1.webp" width="250" height="250">
+                <img src="itrnh2.webp" width="250" height="250">
+                <img src="itrnh3.webp" width="250" height="250">
+                <img src="itrnh4.webp" width="250" height="250">
+              </div>
+              <p>Skills Used: Blender 3D, Blender Grease Pencil, After Effects</p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">The aim for this animation was to create a unofficial music video for the song "Is There Really No Happiness" by Porter Robinson. I enjoyed his new album and the mood 
+                of this song in particular stood out to me so I went with it. The album art used a specific color palette, so those were the colors that I chose to use as well. 
+                The more "toon" and hand-drawn feel of the video was deliberately chosen to create the feeling of childhood nostalgia (the theme of the song), but also because 
+                I was on a tight schedule. I used the rooms to draw parallels to memories further emphasizing the nostalgic effect. Since it is a music video, I didn't have a clear
+                storyline for replay-ability, but rather just to recreate scenes and a feelings that the viewer could relate to. The focus was to think more about the cohesiveness
+                and the bigger picture of the music video. Since it was for a final project, the timeline I had to achieve the finished product was very tight, I had to choose Some
+                things to compromise with. As stated before, the "toon" feeling was partially because of the schedule, though other things that I compromised on were the bigger backgrounds 
+                (I only used an hdri), and the 3D animation (I got open source motion capture data from Mixamo). Through this project I experienced what it is like to keep a realistic
+                schedule and product, and balance out all aspects.
+              </p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">This project required many skills that were new to me at the time, and was made as the final for an animation course. During the process of
+                creating this animation, I self taught how to use Blender Grease Pencil and how to animate in 3D for the first time. Although it was a risky move
+                at the time since I was on a rushed timeline, I still made the decision to try something new as I believe it is best to tackle things head on 
+                if the interest is there.
+              </p>
+              <h2 style="font-family: Righteous; padding-top: 20px;">"Shoulder Meowdy" Stuffed Toy</h2>
+              <iframe style="display: block; margin: 0 auto;" width = "1000" height="500" src="https://youtube.com/embed/uLwG7lAm0eI"></iframe>
+              <div class="cat-photo-gallery-container">
+                <div class="cat-photo-gallery" style="text-align: center; padding: 20px;">
+                  <img src="meowdy1.webp" width="250" height="250">
+                  <img src="meowdy2.webp" width="250" height="250">
+                  <img src="meowdy3.webp" width="250" height="250">
+                  <img src="meowdy4.webp" width="250" height="250">
+                </div>
+              </div>
+              <p>Skills Used: Blender 3D modeling, Creating Patterns, Sewing Machine, Experience Design</p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">The Shoulder Meowdy was a project designed under the prompt: "Design a toy for someone specific in your life"
+                The person that I chose was one of my friends, one with a unique style and that loved stuffed animals. When creating this toy, I was grappling with the idea of "play value," or in other words, 
+                "how do I make the user enjoy the play experience and keep them coming back to this toy?" I initially thought about making my friend a fidget toy since in my interview 
+                with her before the design proccess, she mentioned liking to move her hands a lot, but the toy had a requirement that it needed to be soft. Most fidget toys that I researched
+                were made of hard plastic, there is a good reason for this though, it is easier to give a tactile response when using hard material. While researching toys (going around stores 
+                and the internet looking and trying out toys) I found that there were a lot of baby toys that had this retractable element. I also found that it gave a nice tactile sensation: the 
+                vibration. Coming back to the idea of play value, I know that being able to fidget with the toy wouldn't be enough to keep coming back to it, so I found another element to implement:
+                wearability. Remember in the beginning of this paragraph when I mentioned my friend having a unique style? That was how I knew she would love a stuffed animal on her shoulder. People come
+                back to clothes time and time again, so this solved the last piece of my "play value" puzzle.
+              </p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">The rest of the design came easily, the cat shape was simply because my friend likes cats, and the color because black is 
+                the color of most of her wardrobe. I modeled the shape I wanted in Blender since that was most familiar to me, and the next step, creating the sewing pattern was not. It was completely
+                new to me. I sliced the mesh of the 3D model so that it would lay flat and used that as the pattern. To get the cat to balance on the shoulder, I added weight to the toy by stuffing
+                some of it with rice, which was also nice because the weight made the tactile vibrations come through more. The vibration was also mimicking a cat purring, so it ended up suiting the 
+                image of the stuffed animal as well. I ended up showing the finished project in the Interactive Media Arts Show in Shanghai, and it was very popular there. I also made one for myself since
+                I had to part ways with it giving it my friend. It is surprising that something designed for one specific person ended up having such wide appeal.
+              </p>
+              <h2 style="font-family: Righteous; padding-top: 20px;">Portfolio Website aka the website you are browsing right now</h2>
+              <a href="https://www.carolwu.me/">Portfolio Site</a>
+              <div class="website-gallery-container" style="text-align: center; padding: 20px;">
+                <img src="website1.webp" width="250" height="250">
+                <img src="website2.webp" width="250" height="250">
+                <img src="website3.webp" width="250" height="250">
+                <img src="website4.webp" width="250" height="250">
+              </div>
+              <p>Skills Used: Blender 3D modeling, HTML, Javascript: 3js library, CSS</p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">
+                I had decided that my portfolio website needed a refresh, and I wanted to implement more of my skills into the actual creation of the site to make it look more personal. While thinking 
+                about the design of my website, I knew I wanted to make it 3D somehow; and so I came across the 3js Javascript library. The first step was thinking about the layout of the website, 
+                I drew a lot of inspiration from the example websites on the 3js website, and most of my learning was from their documentation page. Many of the portfolio site featured was of a desk, or
+                room; which makes sense because coders and designers do spend a lot of time at a desk. I wanted my portfolio site to feel personable and give the experience of discovery upon first visit. 
+                That's how I decided to go with the visitor being the mouse on my desk, being able to click into things to discover information. 
+              </p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">
+                The proccess was broken up into many different steps: creating the 3D environment in Blender, importing that into Visual Studio Code, setting up the rest of the scene with 3js, creating
+                the mouse "player", and the rest of the HTML and CSS elements; some steps were a lot more difficult than others. This website was the first time creating one from scratch for me, so there 
+                were many things that popped up along the proccess that I had never thought about before. Because of the nature of the website, it was sort of like programming a game; which I have also 
+                never done before. This was a website full of firsts. The "map" of the desk, how the mouse "player" was going to move, and the mouse collisions were all problems that I had to 
+                solve one step at a time. Through this project I learned the importance of solving one problem at a time and breaking apart a big project into smaller, more digestible pieces. When
+                I first started, I didn't think the scale was going to be as big as it was because I didn't layout all the aspects that needed to be considered. 
+              </p> -->
+              <!-- <h2 style="font-family: Righteous; padding-top: 20px;">"Heart to Heart" Stuffed Toy</h2>
+              <p>Skills Used: Blender 3D modeling, Creating Patterns, Sewing Machine, Experience Design, Electrical Circuits</p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">
+                This stuffed toy was designed following the prompt: a diverse and inclusive toy. At first I was completely lost; diversity and inclusion means a lot of different things, this topic
+                was way too open ended. To design a toy for someone to use means thinking specifically about their needs, so I decided to narrow the topic down. Many people I know fall under the 
+                neurodivergent category, so I decided to design for that since I would be able to have testers for the toy as well. The first step was researching the needs of neurodivergent people,
+                it was there I found that many toys for this group of people already existed. Many of these toys were designed specifically for kids however, and there were many that were designed
+                to be hidden. The traits of these toy were mostly that they were soft to provide relief, or they were tactile to provide something for fidgeting. I found that objects with weight 
+                and repeated movements helped with relaxation and calmness. In terms of visuals, more unique, colorful ones would stand out. 
+              </p>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">
+                I settled on an alien shaped toy that had long weighted limbs and a vibrating chest when you hugged the toy. The long limbs were the answer to something that is easy to drape over 
+                shoulders and hung despite the size of the user. They are also very easy to hold and the weight allows them to balance on the user's shoulders easily. I aimed for every aspect of the 
+                design to come back to the prompt, and wanted to be able to justify every decision I made based off of it. The proccess I used to fabricate this toy was very similar to how I made 
+                the "Shoulder Meowdy" stuffed toy: creating the shape using Blender 3D, unwrapping the model flat to create the sewing machine, creating the prototype, and then doing final adjustments.
+                The proccess was a little more involved this time as I created a soft pressure sensor attached to a motor to achieve the vibrating effect. For the soft button, I used conductive fabric 
+                with conductive fibers and stuffing in between the fabric layers. This is so that when the pouch is squished, the conductive fibers touch each other and complete the circuit. Many existing 
+                toys have hard electrical part in them, but since this is a toy where the tactile feeling is important, I made the decision to make the "button" that turns on the vibration soft as well. 
+                This project helped me experience what it is like to design for a more specific group of people, and to be mindful of all of the decisions that go into the final product.
+              </p> -->
+               <div class="projects-preview">
+      <div class="projects-container">
+        <a class="project-link" href="https://www.carolwu.me/projects/itrnh-animation.html" >
+          <div class="projects">
+       9     <img class="project-thumbnail" src="preview_ani.png"/>
+            <div class="project-desc-text">
+              <h2 class="project-title">"Is There Really No Happiness?" Music Video</h2>
+              <p class="tags"><span style="color:darkorchid; padding-right: 15px;">3D Modeling</span><span style="color: darkgreen; padding-right: 15px;">Animation</span><span style="color:rgb(63, 153, 255); padding-right: 15px;">Storytelling</span></p>
+              <p style="margin: 0;">
+                Animation that explores telling the story of "Is There Really No Happiness?" by Porter Robinson by
+                balancing narrative elements while being re-playable as a music video. This is a class assignment
+                that experiments with Blender's 3D and Grease Pencil tools to create an animation.
+              </p>
+              <a style="margin-top: 15px; width: 150px;" href="https://youtu.be/C5jqBr8UXmk?si=unh7WS9qxkforZ4Z" target="_blank" rel="noopener noreferrer">Link to watch!</a>
+            </div>
+          </div>
+        </a>
+        <a class="project-link" href="https://www.carolwu.me/projects/3d-portfolio.html">
+          <div class="projects">
+            <img class="project-thumbnail" src="preview_site.png"/>
+            <div class="project-desc-text">
+              <h2 class="project-title">3D Portfolio Site</h2>
+              <p class="tags"><span style="color:darkorchid; padding-right: 15px;">3D Modeling</span><span style="color: rgb(255, 164, 36); padding-right: 15px;">Front End Web Development</span></p>
+              <p style="margin: 0;">
+                A "playable" version of the traditional porfolio website that uses a 3D environment
+                in place of the 2D webpage. This is a personal project that explores integrating a more
+                personal and playful touch to my portfolio site.
+              </p>
+              <p>You are here!</p>
+            </div>
+          </div>
+        </a>
+        <a class="project-link" href="https://www.carolwu.me/projects/meowdy.html">
+          <div class="projects">
+            <img class="project-thumbnail" src="preview_meowdy.PNG"/>
+            <div class="project-desc-text">
+              <h2 class="project-title">Shoulder Meow-dy</h2>
+              <p class="tags"><span style="color:darkorchid; padding-right: 15px;">3D Modeling</span><span style="color: rgb(255, 36, 171); padding-right: 15px;">Design</span><span style="color: rgb(175, 33, 33); padding-right: 15px;">Fabrication</span></p>
+              <p style="margin: 0;">
+                A stuffed animal reimagined as a wearable fidget toy! Can you guess how to wear it 
+                and where the fidget is? This was a class assignment that explores maximizing "play value" 
+                and designing for a specific person.
+              </p>
+              <a style="margin-top: 15px; width: 150px;" href="https://youtu.be/uLwG7lAm0eI" target="_blank" rel="noopener noreferrer">Link to view!</a>
+            </div>
+          </div>
+        </a>
+        <a class="project-link" href="https://www.carolwu.me/projects/wsposter.html">
+          <div class="projects">
+            <img class="project-thumbnail" src="preview_wsposter.png"/>
+            <div class="project-desc-text">
+              <h2 class="project-title">ITP/IMA Winter Show Poster</h2>
+              <p class="tags"><span style="color:darkorchid; padding-right: 15px;">3D Modeling</span><span style="color: rgb(255, 36, 171); padding-right: 15px;">Design</span></p>
+              <p style="margin: 0;">
+                Poster design for New York University's Interactive Telecommunications Program (ITP) and Interactive Media Arts (IMA) 
+                winter showcase! This poster was defined by the prompt: "For this challenge, we are inspired by topics like physicality, 
+                connectedness, shared space, and celebration. We’re looking for a strong conceptual design that communicates the ITP/IMA 
+                ethos. We would like to see the more humanistic side of our community and fewer wires, breadboards, and LEDs."
+              </p>
+              <a style="margin-top: 15px; width: 150px;" href="https://drive.google.com/drive/folders/1t2knfVznjt64c1sDdL_PlyvfOKz2L3DL?usp=sharing" target="_blank" rel="noopener noreferrer">Link to View!</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects-modal-footer">
+          <button class="projects-modal-exit-button">exit</button>
+        </div>
+    </div>
+    <div class="hobbies-modal hidden">
+      <div class="hobbies-modal-wrapper">
+        <div class="hobbies-modal-header">
+          <div class="hobbies-modal-title">Hobbies</div>
+        </div>
+          <div class="hobbies-modal-content">
+            <div class="hobbies-modal-content-wrapper">
+              <h2 style="font-family: Righteous;">Photography</h2>
+              <div class="photo-gallery-container">
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies1.webp">
+                    <img src="hobbies1.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies2.webp">
+                    <img src="hobbies2.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies3.webp">
+                    <img src="hobbies3.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies4.webp">
+                    <img src="hobbies4.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies5.webp">
+                    <img src="hobbies5.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies6.webp">
+                    <img src="hobbies6.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies7.webp">
+                    <img src="hobbies7.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies8.webp">
+                    <img src="hobbies8.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+                <div class="photo-gallery">
+                  <a target="_blank" href="hobbies9.webp">
+                    <img src="hobbies9.webp" alt="Sunset" width="300" height="300">
+                  </a>
+                </div>
+              </div>
+              <p style="font-family: Be Vietnam Pro; font-weight: 200;">
+                Whenever I'm going somewhere, I will always bring my camera to document my trip! It is mainly something I am experimenting and find fun to explore
+                but in the future I would take a class if possible. These are a collection of photos I've taken over the past year: from New York City all the way to Shanghai.
+                With technology becoming more and more accessible, photos are a medium that and increasing amount of people have access to as the bar of entry is pretty low; leading 
+                us to be able to see through more individual's lenses, and I think that is beautiful.  
+              </p>
+              <h2 style="font-family: Righteous; padding-top: 20px;">Sketching</h2>
+            <div style="text-align: center;">
+              <img src="sketch1.webp" width="300" height="300">
+              <img src="sketch2.webp" width="300" height="300">
+              <img src="sketch3.webp" width="300" height="300">
+            </div>
+            <p style="font-family: Be Vietnam Pro; font-weight: 200; padding-top: 10px;">
+              I've had many professors say that they think writing down notes is more useful than typing them up because it forces you to acknowlege what information 
+              you are retaining, and that kind of connects to how I feel about sketching. Just taking in and observing the world is not enough sometimes, sometimes it 
+              is only possible to acknowlege beauty by slowly taking it in by sketching it out. Life is very fast paced in this new age, it is hard to see what is in front 
+              of you, and even harder to think it is enough. Drawing helps me slow that pace down and take it all in.
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="hobbies-modal-footer">
+          <button class="hobbies-modal-exit-button">exit</button>
+        </div>
+    </div>
+    
+    
+    <script type="module" src="/src/desk.js"></script>
+  </body>
+</html>
+    
